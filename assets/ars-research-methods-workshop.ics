@@ -1,0 +1,37 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Azerbaijan Research Society//Research Methods Workshop 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ARS Research Methods Workshop
+BEGIN:VEVENT
+UID:ars-rmw-20261002@azresearchsociety.org
+DTSTAMP:20260927T210000Z
+DTSTART:20261002T160000Z
+DTEND:20261002T164500Z
+SUMMARY:ARS Workshop 1 - Foundations of Research and Literature Review
+DESCRIPTION:Presenter: Dr. Sabrin Azim. Online access will be sent to registered participants. Register: https://docs.google.com/forms/d/e/1FAIpQLScf-B8woMKhq1IZ6uRhkawFCimVMlwreB0uVO-XTJ_b2MB-Ew/viewform
+LOCATION:Online
+URL:https://azresearchsociety.org/workshop.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ars-rmw-20261009@azresearchsociety.org
+DTSTAMP:20260927T210000Z
+DTSTART:20261009T160000Z
+DTEND:20261009T164000Z
+SUMMARY:ARS Workshop 2 - Study Design and Methodological Quality
+DESCRIPTION:Presenter: Dr. Azizeh Hosseinjany. Online access will be sent to registered participants. Register: https://docs.google.com/forms/d/e/1FAIpQLScf-B8woMKhq1IZ6uRhkawFCimVMlwreB0uVO-XTJ_b2MB-Ew/viewform
+LOCATION:Online
+URL:https://azresearchsociety.org/workshop.html
+END:VEVENT
+BEGIN:VEVENT
+UID:ars-rmw-20261016@azresearchsociety.org
+DTSTAMP:20260927T210000Z
+DTSTART:20261016T160000Z
+DTEND:20261016T170000Z
+SUMMARY:ARS Workshop 3 - Scientific Writing and Publication Pathway
+DESCRIPTION:Presenter: Masud Babayev. Includes a 40-minute presentation and a 20-minute Q&A. Online access will be sent to registered participants. Register: https://docs.google.com/forms/d/e/1FAIpQLScf-B8woMKhq1IZ6uRhkawFCimVMlwreB0uVO-XTJ_b2MB-Ew/viewform
+LOCATION:Online
+URL:https://azresearchsociety.org/workshop.html
+END:VEVENT
+END:VCALENDAR

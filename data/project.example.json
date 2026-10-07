@@ -1,0 +1,22 @@
+{
+  "public": false,
+  "approval": {"description": false, "team": false, "outputs": false},
+  "slug": "replace-with-project-slug",
+  "title": {"az": "Layihənin təsdiqlənmiş adı", "en": "Approved project title"},
+  "status": "proposed",
+  "featured": false,
+  "question": {"az": "Bir cümləlik tədqiqat sualı", "en": "One-sentence research question"},
+  "summary": {"az": "İctimai təsvir", "en": "Public description"},
+  "why": {"az": "Bu sualın əhəmiyyəti", "en": "Why this question matters"},
+  "method": {"az": "İctimai paylaşım üçün təsdiqlənmiş yanaşma", "en": "Approach approved for public sharing"},
+  "fields": ["data"],
+  "institutions": [],
+  "lead": "replace-with-existing-person-id",
+  "team": [
+    {"person": "replace-with-existing-person-id", "role": {"az": "Rəhbər", "en": "Lead"}, "note": {"az": "Layihədə vəzifəsi", "en": "Responsibility in this project"}}
+  ],
+  "open_roles": [],
+  "milestones": [],
+  "outputs": [],
+  "updates": []
+}
