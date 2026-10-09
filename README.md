@@ -1,4 +1,6 @@
-# Azerbaijan Research Society website — V38
+# Azerbaijan Research Society website — V38.1
+
+V38.1: membership buttons go to the contact form, SVG program icons, consistent instructor names and the `.nojekyll` file. See CHANGELOG.md.
 
 V37.1 removes all 11 unverified publication entries. The 20 verified entries, existing academic-profile links and all board portraits remain. No pending notices or blank cards appear. The audit file is historical editorial documentation.
 

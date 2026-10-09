@@ -1,5 +1,13 @@
 # Changelog
 
+## V38.1 — Join routes, icons and hosting file
+
+- Send the main "İcmaya qoşul" and "Üzv olmaq üçün yaz" buttons to the membership contact form (the Join page is project-only while no roles are open).
+- Link the Mentor matching program card to the mentoring contact topic.
+- Replace Unicode program glyphs with consistent inline SVG icons.
+- Use the same instructor names as the People profiles (Dr. Sabrin Ali Azim, Məsud Babayev).
+- Add the missing `.nojekyll` file required for GitHub Pages.
+
 ## V38 — Verified profiles, GitHub Pages cleanup and useful entry paths
 
 - Retain 20 verified publications and remove all 11 unverified records.
