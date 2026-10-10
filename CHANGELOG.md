@@ -1,5 +1,14 @@
 # Changelog
 
+## V39 — Mobile visibility fix, first project, new advisor
+
+- Fix board members and later sections staying invisible on phones (homepage stopped at Orkhan Jafarli). The scroll-reveal effect is now skipped below 760px, reveals on the first visible pixel elsewhere, has a scroll fallback, and only hides content while JavaScript runs.
+- Bump all asset cache keys to `?v=39` so phones drop the cached V38 script.
+- Add Dr. Mahammad Jamalbayov to the Scientific Advisory Board (16 members) with bilingual biography, portrait and 5 DOI-linked publications.
+- Add the "Dr." title for members whose biographies confirm a completed doctorate: Azizeh Hosseinjany, Sabrin Ali Azim, Ali Madayen, Şamxal Baybekov, Mahammad Jamalbayov. JSON-LD keeps plain names with `honorificPrefix`.
+- Publish the first ARS project, the Pump–Well–Reservoir Simulator for Sucker-Rod Wells (member: Məsud Babayev; scientific advisor: Dr. Mahammad Jamalbayov), with an interactive animated sucker-rod pump cross-section (continuous vs intermittent pumping, stroke speed) based on the well 1220 simulation results. No slides or PDFs are published.
+- Projects can now include a custom visual (`"visual": true` + `templates/project-visuals/<slug>.html`) and a `"cover": "pumpjack"` card illustration. Project sidebars list the team with roles; empty Milestones and Open roles sections are omitted.
+
 ## V38.1 — Join routes, icons and hosting file
 
 - Send the main "İcmaya qoşul" and "Üzv olmaq üçün yaz" buttons to the membership contact form (the Join page is project-only while no roles are open).

@@ -170,3 +170,100 @@
 .propose-card:only-child h2,.propose-card:only-child p { grid-column:2; margin:0; }
 .propose-card:only-child .button { grid-column:3; grid-row:1/3; }
 @media(max-width:700px) { .propose-card:only-child { display:flex; align-items:flex-start; gap:18px; }.propose-card:only-child .button { white-space:normal; } }
+
+/* ---- Rod-pump project visual (V39) ---- */
+.rodpump { --oil:#9a6420; --oil-deep:#7a4c14; --soil1:#f1ece2; --soil2:#e9e1d1; padding:64px 0 56px; background:#fff; border-bottom:1px solid var(--line); }
+.rodpump-grid { display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); grid-template-areas:"figure intro" "figure controls" "figure readout"; grid-template-rows:auto auto 1fr; column-gap:56px; row-gap:26px; align-items:start; }
+.rodpump-intro { grid-area:intro; }
+.rodpump-intro h2 { margin:0 0 12px; font:400 clamp(2rem,3.6vw,2.9rem)/1.1 var(--font-display); }
+.rodpump-intro p { margin:0; max-width:60ch; color:#3b5470; }
+.rodpump-controls { grid-area:controls; display:flex; flex-wrap:wrap; align-items:flex-end; gap:16px 22px; }
+.rodpump-control-row { display:flex; flex-direction:column; gap:6px; }
+.rodpump-control-label { font-size:var(--fs-small); font-weight:700; color:#3b5470; }
+.rodpump-segment { display:inline-flex; padding:3px; background:#eef3f6; border:1px solid var(--line); border-radius:999px; }
+.rodpump-segment button { min-height:40px; min-width:44px; padding:6px 16px; border:0; border-radius:999px; background:transparent; color:var(--navy); font-weight:700; cursor:pointer; }
+.rodpump-segment button[aria-pressed="true"] { background:var(--navy); color:#fff; }
+.rodpump-play { min-height:44px; padding:8px 18px; border:1px solid var(--navy); border-radius:999px; background:#fff; color:var(--navy); font-weight:700; cursor:pointer; }
+.rodpump-play:hover, .rodpump-segment button:hover:not([aria-pressed="true"]) { background:#e3edf2; }
+.rodpump-figure { grid-area:figure; margin:0; border-radius:var(--r-md); overflow:hidden; background:#fff; border:1px solid var(--line); }
+.rodpump-svg { display:block; width:100%; height:auto; max-height:min(86vh,820px); }
+.rodpump-figure figcaption { padding:10px 16px 12px; font-size:var(--fs-small); color:#526a80; border-top:1px solid var(--line); background:#fff; }
+.rodpump-readout { grid-area:readout; }
+.rodpump-phase { margin:0; font:400 2rem/1.15 var(--font-display); color:var(--navy); }
+.rodpump-phase-text { margin:8px 0 22px; min-height:5.1em; max-width:58ch; color:#3b5470; }
+.rodpump-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); margin:0; border-top:2px solid var(--navy); }
+.rodpump-stats div { padding:14px 12px 4px 0; }
+.rodpump-stats dt { font-size:var(--fs-small); color:#526a80; line-height:1.35; }
+.rodpump-stats dd { margin:6px 0 0; font:400 1.65rem/1.1 var(--font-display); font-variant-numeric:tabular-nums; }
+.rodpump-insight { margin:18px 0 8px; padding:14px 16px; border-left:3px solid var(--red); background:#fbf4f1; max-width:60ch; }
+.rodpump-source { margin:0; font-size:var(--fs-small); color:#526a80; }
+.rodpump-timeline { margin:0 0 20px; }
+.rodpump-timeline-bar { position:relative; display:flex; height:10px; border-radius:999px; overflow:visible; }
+.rodpump-timeline-bar span { display:block; height:100%; }
+.rodpump-timeline-bar .rp-run { background:var(--oil); border-radius:999px 0 0 999px; }
+.rodpump-timeline-bar .rp-idle { background:#d9e3ea; border-radius:0 999px 999px 0; }
+.rodpump-timeline-bar i { position:absolute; top:-5px; width:4px; height:20px; margin-left:-2px; background:var(--navy); border-radius:2px; }
+.rodpump-timeline-labels { display:flex; justify-content:space-between; margin-top:6px; font-size:var(--fs-small); color:#526a80; }
+.rodpump-field { margin-top:40px; padding-top:28px; border-top:1px solid var(--line); display:grid; grid-template-columns:220px minmax(0,1fr); gap:24px; }
+.rodpump-field h3 { margin:0; font:400 1.5rem/1.2 var(--font-display); }
+.rodpump-field p { margin:0; max-width:72ch; color:#3b5470; }
+
+/* SVG parts */
+.rodpump-svg .rp-sky { fill:#f3f7f9; }
+.rodpump-svg .rp-soil1 { fill:var(--soil1); } .rodpump-svg .rp-soil2 { fill:var(--soil2); }
+.rodpump-svg .rp-ground { stroke:#8a7a5e; stroke-width:2; }
+.rodpump-svg .rp-bore { fill:#fdfbf7; }
+.rodpump-svg .rp-oil { fill:var(--oil); }
+.rodpump-svg .rp-flow { stroke:#e9c48a; stroke-width:2.4; stroke-dasharray:3 10; fill:none; }
+.rodpump-svg .rp-wall { stroke:var(--navy); stroke-width:3; fill:none; }
+.rodpump-svg .rp-tube { stroke:#3d5672; stroke-width:2; fill:none; }
+.rodpump-svg .rp-seat { stroke:var(--navy); stroke-width:3; }
+.rodpump-svg .rp-ball { fill:#fff; stroke:var(--navy); stroke-width:2; }
+.rodpump-svg .rp-perfs path { stroke:#8a6a32; stroke-width:3; stroke-linecap:round; }
+.rodpump-svg .rp-inflow path { stroke:var(--oil-deep); stroke-width:2; stroke-dasharray:4 8; fill:none; }
+.rodpump-svg .rp-break { fill:#fff; stroke:#b9c7d3; stroke-width:1; }
+.rodpump-svg .rp-depth { font:600 12px var(--font-sans); fill:#526a80; }
+.rodpump-svg .rp-rod { stroke:#4a5d72; stroke-width:3; fill:none; }
+.rodpump-svg .rp-carrier, .rodpump-svg .rp-plunger { fill:#c7d3dd; stroke:var(--navy); stroke-width:2; }
+.rodpump-svg .rp-wellhead { fill:#dfe7ee; stroke:var(--navy); stroke-width:2.2; }
+.rodpump-svg .rp-frame { stroke:var(--navy); stroke-width:4; stroke-linecap:round; fill:none; }
+.rodpump-svg .rp-gearbox { fill:#dfe7ee; stroke:var(--navy); stroke-width:2.2; }
+.rodpump-svg .rp-motor { fill:#c7d3dd; stroke:var(--navy); stroke-width:2; }
+.rodpump-svg .rp-belt { stroke:#526a80; stroke-width:1.5; }
+.rodpump-svg .rp-crankarm { stroke:var(--navy); stroke-width:6; stroke-linecap:round; }
+.rodpump-svg .rp-weight { stroke:var(--navy); stroke-width:9; stroke-linecap:round; fill:none; }
+.rodpump-svg .rp-pitman { stroke:#3d5672; stroke-width:4; stroke-linecap:round; }
+.rodpump-svg .rp-bridle { stroke:#3d5672; stroke-width:1.6; }
+.rodpump-svg .rp-beam { stroke:var(--navy); stroke-width:9; stroke-linecap:round; }
+.rodpump-svg .rp-horsehead { fill:var(--navy); }
+.rodpump-svg .rp-pivot { fill:#fff; stroke:var(--navy); stroke-width:2.4; }
+.rodpump-svg .rp-labels text { font:600 12.5px var(--font-sans); fill:var(--navy); }
+.rodpump-svg .rp-labels path { stroke:#7b8fa3; stroke-width:1; }
+.rodpump-svg .rp-labels .rp-level-line { stroke:var(--oil-deep); stroke-dasharray:3 3; }
+
+/* Static pumpjack cover for project cards */
+.project-cover-pumpjack { background:#eef3f6; }
+.project-cover-pumpjack path, .project-cover-pumpjack circle { fill:none; stroke:var(--navy); stroke-width:3; stroke-linecap:round; }
+.project-cover-pumpjack .pj-beam path { stroke-width:6; }
+.project-cover-pumpjack .pj-head { fill:var(--navy); stroke-width:2; }
+.project-cover-pumpjack .pj-soil { fill:#e9e1d1; stroke:none; }
+.project-cover-pumpjack .pj-ground { stroke:#8a7a5e; stroke-width:2; }
+.project-cover-pumpjack .pj-rod { stroke:#4a5d72; stroke-width:2; }
+.project-cover-pumpjack .pj-pivot { fill:#fff; }
+.project-side-team { list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.project-side-team li { display:flex; flex-direction:column; line-height:1.35; }
+.project-side-team a { font-weight:700; }
+.project-side-team small { color:#526a80; }
+
+@media (max-width:900px) {
+  .rodpump { padding:44px 0 36px; }
+  .rodpump-grid { grid-template-columns:minmax(0,1fr); grid-template-areas:"intro" "controls" "figure" "readout"; }
+  .rodpump-figure { max-width:520px; width:100%; justify-self:center; }
+  .rodpump-field { grid-template-columns:minmax(0,1fr); gap:10px; }
+}
+@media (max-width:480px) {
+  .rodpump-stats dd { font-size:1.3rem; }
+  .rodpump-phase-text { min-height:7.6em; }
+  .rodpump-segment button { padding:6px 12px; }
+}
+@media (max-width:700px) { .project-side .project-side-team { display:none; } }

@@ -33,12 +33,12 @@ for (const language of ['az', 'en']) {
   }
 }
 const html = fs.readFileSync(path.join(root, 'people.html'), 'utf8');
-for (const [page, role, count] of [['scientific-board.html', true, 15], ['executive-board.html', false, 7]]) {
+for (const [page, role, count] of [['scientific-board.html', true, 16], ['executive-board.html', false, 7]]) {
   const start = html.indexOf('<a class="choice-card reveal" href="' + page + '">');
   const preview = html.slice(start, html.indexOf('</a>', start));
   assert.equal((preview.match(/<img /g) || []).length, count);
   for (const person of Object.values(people).filter(p => ['roleAdvisory', 'roleAdvisoryHead'].includes(p.roleKey) === role)) assert(preview.includes(person.image));
 }
-assert.equal(Object.values(counts).reduce((a,b)=>a+b,0),20);
+assert.equal(Object.values(counts).reduce((a,b)=>a+b,0),25);
 assert.equal(counts.pending + counts.supplied, 0);
-console.log('Passed bilingual drawer rendering, 20 verified records only, DOI link counts, static profiles, 15 Scientific and 7 Executive preview portraits.', counts);
+console.log('Passed bilingual drawer rendering, 25 verified records only, DOI link counts, static profiles, 16 Scientific and 7 Executive preview portraits.', counts);

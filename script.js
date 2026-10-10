@@ -363,7 +363,7 @@ const translations = {
     ]
   },
   azizeh: {
-    name: "Azizeh Hosseinjany",
+    name: "Dr. Azizeh Hosseinjany",
     roleKey: "roleAdvisory",
     image: "assets/azizeh.webp?v=14",
     bio: {
@@ -388,7 +388,7 @@ const translations = {
     ]
   },
   sabrin: {
-    name: "Sabrin Ali Azim",
+    name: "Dr. Sabrin Ali Azim",
     roleKey: "roleAdvisory",
     image: "assets/sabrin.webp?v=14",
     bio: {
@@ -907,7 +907,7 @@ const profiles = {
     "links": []
   },
   "ali-madayen": {
-    "name": "Ali Madayen",
+    "name": "Dr. Ali Madayen",
     "roleKey": "roleAdvisory",
     "image": "assets/ali-madayen.webp?v=36",
     "bio": {
@@ -1020,7 +1020,7 @@ const profiles = {
     ]
   },
   "shamxal-baybekov": {
-    "name": "Şamxal Baybekov",
+    "name": "Dr. Şamxal Baybekov",
     "roleKey": "roleAdvisory",
     "image": "assets/shamxal-baybekov.webp?v=36",
     "bio": {
@@ -1213,6 +1213,102 @@ const profiles = {
         "citation": "Subacute sclerosing panencephalitis. Radiopaedia · Case study."
       },
     ]
+  },
+  "mahammad-jamalbayov": {
+    "name": "Dr. Mahammad Jamalbayov",
+    "roleKey": "roleAdvisory",
+    "image": "assets/mahammad-jamalbayov.webp?v=39",
+    "bio": {
+      "az": [
+        "Məhəmməd Asəf oğlu Camalbəyov texnika elmləri doktoru, dosent, neft və qaz yataqlarının işlənməsi, istismarı və kompüter modelləşdirilməsi sahəsində 40 ildən artıq elmi və praktiki təcrübəyə malik alim və mühəndisdir. 2016-cı ildən SOCAR-da aparıcı tədqiqatçı kimi çalışır. Azərbaycan Dövlət Neft və Sənaye Universitetində neft mühəndisliyi üzrə magistr, Azərbaycan Milli Elmlər Akademiyasında fəlsəfə doktoru, Bakı Dövlət Universitetində isə elmlər doktoru elmi dərəcəsi alıb.",
+        "Onun elmi fəaliyyətinin əsas istiqamətləri neft-qaz laylarının energetikası, layların işlənmə mexanizmlərinin müəyyənləşdirilməsi, karbohidrogen sistemlərində süzülmə proseslərinin riyazi modelləşdirilməsi, quyuların istismar rejimlərinin optimallaşdırılması və mürəkkəb dinamik sistemlərin kompüter simulyasiyasıdır. O, Diskret-İmitasiya Modelləşdirmə Konsepsiyasının (DIMC) müəllifidir; bu konsepsiya əsasında nasos–quyu–lay sisteminin inteqrə olunmuş dinamik simulyasiyası üçün X-Oil Laboratory proqram kompleksi hazırlanıb.",
+        "Alim 200-dən artıq elmi əsərin, o cümlədən məqalələrin, ixtiraların və proqram məhsullarının müəllifidir. Tədqiqatlarının nəticələri SPE Journal, Petroleum Research, Arabian Journal of Geosciences və digər beynəlxalq nəşrlərdə dərc olunub."
+      ],
+      "en": [
+        "Mahammad Jamalbayov is a Doctor of Technical Sciences, associate professor, and petroleum engineer with more than 40 years of research and field experience in oil and gas field development, production and computer modelling. He has been a Lead Researcher at SOCAR since 2016. He holds a master's degree in Petroleum Engineering from Azerbaijan State Oil and Industry University, a PhD from the Azerbaijan National Academy of Sciences, and a Doctor of Science degree from Baku State University.",
+        "His research covers reservoir energetics, identification of reservoir drive mechanisms, mathematical modelling of flow in hydrocarbon systems, optimization of well operating regimes, and computer simulation of complex dynamic systems. He is the author of the Discrete-Imitation Modelling Concept (DIMC), on which the X-Oil Laboratory software for integrated dynamic simulation of the pump–well–reservoir system is built.",
+        "He has authored more than 200 scientific works, including articles, inventions and software products. His results have been published in SPE Journal, Petroleum Research, the Arabian Journal of Geosciences and other international outlets."
+      ]
+    },
+    "interests": {
+      "az": [
+        "Neft və qaz yataqlarının işlənməsi",
+        "Lay energetikası",
+        "Lay rejiminin erkən müəyyənləşdirilməsi",
+        "Süzülmənin riyazi modelləşdirilməsi",
+        "Diskret-imitasiya modelləşdirməsi",
+        "Ştanqlı quyu nasosları",
+        "Dövri nasos rejimi",
+        "Quyuların hidrodinamik tədqiqi",
+        "Qaz-kondensat və yüngül neft layları",
+        "Kompüter simulyasiyası"
+      ],
+      "en": [
+        "Oil & gas field development",
+        "Reservoir energetics",
+        "Early identification of reservoir drive",
+        "Mathematical modelling of porous-media flow",
+        "Discrete-imitation modelling",
+        "Sucker-rod pumping",
+        "Intermittent pumping",
+        "Well-test interpretation",
+        "Gas-condensate & light-oil reservoirs",
+        "Computer simulation"
+      ]
+    },
+    "links": [],
+    "publications": [
+      {
+        "title": "The Early Determination Method of Reservoir Drive of Oil Deposits Based on Jamalbayli Indexes",
+        "authors": "",
+        "year": 2024,
+        "journal": "SPE Journal",
+        "verification": "verified",
+        "doi": "10.2118/221480-PA",
+        "source": "https://doi.org/10.2118/221480-PA",
+        "citation": "(2024). The Early Determination Method of Reservoir Drive of Oil Deposits Based on Jamalbayli Indexes. SPE Journal."
+      },
+      {
+        "title": "The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process",
+        "authors": "Mahammad A. Jamalbayov, Nazim A. Valiyev",
+        "year": 2024,
+        "journal": "Petroleum Research",
+        "verification": "verified",
+        "doi": "10.1016/j.ptlrs.2024.04.001",
+        "source": "https://doi.org/10.1016/j.ptlrs.2024.04.001",
+        "citation": "Mahammad A. Jamalbayov, Nazim A. Valiyev. (2024). The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process. Petroleum Research."
+      },
+      {
+        "title": "The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping",
+        "authors": "",
+        "year": 2024,
+        "journal": "SPE Middle East Artificial Lift Conference and Exhibition",
+        "verification": "verified",
+        "doi": "10.2118/221528-MS",
+        "source": "https://doi.org/10.2118/221528-MS",
+        "citation": "(2024). The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping. SPE Middle East Artificial Lift Conference and Exhibition."
+      },
+      {
+        "title": "Determination of Dynamic Drainage Area of a Gas Condensate Well, Monitoring of Aquifer Activity, and Quantitative Evaluation of Aquifer Performance",
+        "authors": "",
+        "year": 2024,
+        "journal": "Arabian Journal of Geosciences",
+        "verification": "verified",
+        "doi": "10.1007/s12517-024-11966-9",
+        "source": "https://doi.org/10.1007/s12517-024-11966-9",
+        "citation": "(2024). Determination of Dynamic Drainage Area of a Gas Condensate Well, Monitoring of Aquifer Activity, and Quantitative Evaluation of Aquifer Performance. Arabian Journal of Geosciences."
+      },
+      {
+        "title": "A Stationary Oil Inflow to the Wellbore Taking into Account the Initial Pressure Gradient",
+        "authors": "",
+        "year": 2020,
+        "journal": "Arabian Journal of Geosciences",
+        "verification": "verified",
+        "doi": "10.1007/s12517-020-05868-9",
+        "source": "https://doi.org/10.1007/s12517-020-05868-9",
+        "citation": "(2020). A Stationary Oil Inflow to the Wellbore Taking into Account the Initial Pressure Gradient. Arabian Journal of Geosciences."
+      }
+    ]
   }
 
 };
@@ -1252,7 +1348,8 @@ const affiliationMarks = {
     label: { az: "Genetik Ehtiyatlar İnstitutu", en: "Genetic Resources Institute" },
     tone: "green"
   },
-  gehreman: { mark: "AMU", label: "Adam Mickiewicz University", tone: "navy" }
+  gehreman: { mark: "AMU", label: "Adam Mickiewicz University", tone: "navy" },
+  "mahammad-jamalbayov": { mark: "SOCAR", label: "State Oil Company of the Republic of Azerbaijan", tone: "blue" }
 };
 
 document.querySelectorAll(".person-card[data-profile]").forEach((card) => {
@@ -1918,7 +2015,16 @@ document.querySelectorAll(".reveal").forEach((element, index) => {
   element.style.setProperty("--reveal-delay", `${Math.min(index % 4, 3) * 55}ms`);
 });
 
-if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+// Scroll reveal. Content must never stay hidden: a ratio threshold can never be
+// reached by blocks taller than the viewport (stacked board grids on phones), so
+// reveal on the first visible pixel, skip the effect on narrow screens, and fall
+// back to showing everything if the observer has not fired.
+const revealElements = [...document.querySelectorAll(".reveal")];
+const revealAll = () => revealElements.forEach((element) => element.classList.add("visible"));
+const revealAnimated = "IntersectionObserver" in window
+  && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  && !window.matchMedia("(max-width: 760px)").matches;
+if (revealAnimated) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -1926,10 +2032,16 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12 });
-  document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+  }, { threshold: 0, rootMargin: "0px 0px -6% 0px" });
+  revealElements.forEach((element) => observer.observe(element));
+  const revealPassed = () => revealElements.forEach((element) => {
+    if (element.getBoundingClientRect().top < window.innerHeight) element.classList.add("visible");
+  });
+  window.addEventListener("scroll", revealPassed, { passive: true });
+  window.addEventListener("resize", revealPassed, { passive: true });
+  window.setTimeout(revealPassed, 1200);
 } else {
-  document.querySelectorAll(".reveal").forEach((element) => element.classList.add("visible"));
+  revealAll();
 }
 
 const yearElement = document.getElementById("year");

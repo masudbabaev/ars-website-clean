@@ -43,7 +43,7 @@ for path,p in pages.items():
   if not dest.exists():errors.append(f'{path.relative_to(root)}: missing {ref}')
   elif u.fragment and dest in pages and unquote(u.fragment) not in pages[dest].ids:errors.append(f'{path.relative_to(root)}: missing anchor {ref}')
  if path.name!='departments.html' and 'route-redirect.js' not in ' '.join(p.scripts):
-  assert any('script.js?v=38' in s for s in p.scripts),(path,'no common script')
+  assert any('script.js?v=39' in s for s in p.scripts),(path,'no common script')
 print('\n'.join(errors));print('Pages:',len(pages),'Errors:',len(errors))
 if errors:raise SystemExit(1)
 # Conservative CSS block balance and undefined tokens.

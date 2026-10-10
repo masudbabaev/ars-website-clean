@@ -32,7 +32,7 @@ Only recruiting projects may have open roles. Completed projects must link at le
 
 Fields: `engineering`, `life`, `data`, `humanities`, `other`. They are neutral tags, not departments. `institutions` lists explicitly confirmed project affiliations or hosts; do not infer them from a member's employer. It can be empty.
 
-The lead must be a team member. Existing person IDs: `amil`, `azizeh`, `sabrin`, `xedice`, `gehreman`, `ulkar`, `nijat`, `orkhan`, `ibrahim`, `masud`, `xeyranse`, `humay`, `jale`, `nargiz`, `zehra`, `ayten-merdanova`, `orxan-refiyev`, `ali-madayen`, `natiq-soltanov`, `shamxal-baybekov`, `senan-goyushlu`, `elshen-abdullayev`. Team assignments never replace society governance titles.
+The lead must be a team member. Existing person IDs: `amil`, `azizeh`, `sabrin`, `xedice`, `gehreman`, `ulkar`, `nijat`, `orkhan`, `ibrahim`, `masud`, `xeyranse`, `humay`, `jale`, `nargiz`, `zehra`, `ayten-merdanova`, `orxan-refiyev`, `ali-madayen`, `natiq-soltanov`, `shamxal-baybekov`, `senan-goyushlu`, `elshen-abdullayev`, `mahammad-jamalbayov`. Team assignments never replace society governance titles.
 
 ## Optional collections
 
@@ -73,3 +73,7 @@ Forms retain native HTML submission without JavaScript; all three linked section
 - Homepage `#departments` remains a compatibility anchor at Featured projects, and JavaScript updates it to `#projects`.
 
 Keep `.nojekyll`, `CNAME` and `route-redirect.js` in the deployment root. Upload the contents of the ZIP's `ars-website` folder, not the ZIP itself. If your Git upload does not delete removed files, delete the four old `assets/department-*.svg` files; they are no longer referenced. After later removals, delete retired project directories in the repository as well.
+
+## Custom project visuals
+
+Set `"visual": true` and add `templates/project-visuals/<slug>.html`; the build inserts it between the project header and the body. Set `"cover": "pumpjack"` to replace the constellation cover with a pumping-unit drawing. The first project, `rod-pump-simulator`, uses both; its animation lives in `assets/rod-pump.js`.

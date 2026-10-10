@@ -1,4 +1,6 @@
-# Azerbaijan Research Society website — V38.1
+# Azerbaijan Research Society website — V39
+
+V39: fixes members disappearing on phones, adds Dr. Mahammad Jamalbayov, "Dr." titles, and the first project (rod-pump simulator) with an animated pump visual. See CHANGELOG.md.
 
 V38.1: membership buttons go to the contact form, SVG program icons, consistent instructor names and the `.nojekyll` file. See CHANGELOG.md.
 
@@ -59,4 +61,4 @@ Empty project statistics are hidden until the catalogue has approved projects an
 
 After uploading V38, delete `_headers` and `_redirects` from the repository. You may also delete the four unreferenced `assets/department-ai.svg`, `assets/department-engineering.svg`, `assets/department-humanities.svg` and `assets/department-life.svg` files left over from old releases. Do not delete `departments/`, `departments.html`, `join/`, `projects/`, `people/`, `CNAME` or `.nojekyll`: these are required routes or hosting files. Keep `data/`, `docs/`, `templates/` and `tools/` as the editing source.
 
-On macOS use Command+Shift+period to reveal `.nojekyll`, or create an empty `.nojekyll` at the repository root in GitHub. Verify the README heading says V38 and `people.html` loads `script.js?v=38` after committing.
+On macOS use Command+Shift+period to reveal `.nojekyll`, or create an empty `.nojekyll` at the repository root in GitHub. Verify the README heading says V38 and `people.html` loads `script.js?v=39` after committing.

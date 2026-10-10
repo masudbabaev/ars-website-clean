@@ -1,0 +1,162 @@
+<!doctype html><html lang="az"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ştanqlı nasos quyuları üçün nasos–quyu–lay simulyatoru | ARS</title><meta name="description" content="Nasosu, quyunu və quyudibi zonanı vahid dinamik sistem kimi modelləşdirən, diskret-imitasiya konsepsiyasına əsaslanan və Bibiheybət yatağında sınaqdan keçirilmiş simulyator."/>
+<meta name="theme-color" content="#071f4a"/><link rel="canonical" href="https://azresearchsociety.org/projects/rod-pump-simulator/"/>
+<meta property="og:type" content="website"/><meta property="og:title" content="Ştanqlı nasos quyuları üçün nasos–quyu–lay simulyatoru | ARS"/><meta property="og:description" content="Nasosu, quyunu və quyudibi zonanı vahid dinamik sistem kimi modelləşdirən, diskret-imitasiya konsepsiyasına əsaslanan və Bibiheybət yatağında sınaqdan keçirilmiş simulyator."/><meta property="og:url" content="https://azresearchsociety.org/projects/rod-pump-simulator/"/>
+<link rel="icon" href="/assets/ars-logo.png?v=22"/><link rel="stylesheet" href="/styles.css?v=39"/><link rel="stylesheet" href="/projects.css?v=39"/>
+<script src="/script.js?v=39" defer></script><script src="/project-data.js?v=39" defer></script><script src="/projects.js?v=39" defer></script></head>
+<body class="inner-page" data-page="projects" data-title-az="Ştanqlı nasos quyuları üçün nasos–quyu–lay simulyatoru | ARS" data-title-en="Pump–Well–Reservoir Simulator for Sucker-Rod Wells | ARS" data-description-az="Nasosu, quyunu və quyudibi zonanı vahid dinamik sistem kimi modelləşdirən, diskret-imitasiya konsepsiyasına əsaslanan və Bibiheybət yatağında sınaqdan keçirilmiş simulyator." data-description-en="A simulator that models the pump, the well and the near-wellbore reservoir as one dynamic system, built on the discrete-imitation modelling concept and tested in the Bibiheybat field.">
+<a class="skip-link" href="#main" data-i18n="skip">Əsas məzmuna keç</a><header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="/index.html" aria-label="Azerbaijan Research Society home"><img src="/assets/ars-logo.png?v=22" alt="ARS — Azerbaijan Research Society" width="662" height="700" /></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menyunu aç"><span></span><span></span><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="Əsas naviqasiya" data-i18n-aria-label="navLabel">
+          <a href="/about.html" data-i18n="navAbout">Haqqımızda</a><a href="/programs.html" data-i18n="navPrograms">Proqramlar</a><a href="/workshop.html" data-i18n="navWorkshop">Emalatxana</a><a href="/projects.html" aria-current="page" data-i18n="navProjects">Layihələr</a><a href="/people.html" data-i18n="navTeam">İnsanlar</a><a href="/contact.html" data-i18n="navContact">Əlaqə</a>
+        </nav>
+        <div class="language-switch" role="group" aria-label="Dil seçimi" data-i18n-aria-label="languageLabel"><button type="button" class="lang-button active" data-lang="az" aria-pressed="true">AZ</button><span aria-hidden="true"></span><button type="button" class="lang-button" data-lang="en" aria-pressed="false">EN</button></div>
+      </div>
+    </header><main id="main"><section class="project-detail-head"><div class="container"><a href="/projects.html"><span data-az="Bütün layihələr" data-en="All projects" >Bütün layihələr</span> ←</a><span data-az="Davam edir" data-en="Active" class="project-status status-active">Davam edir</span><h1 data-az="Ştanqlı nasos quyuları üçün nasos–quyu–lay simulyatoru" data-en="Pump–Well–Reservoir Simulator for Sucker-Rod Wells" >Ştanqlı nasos quyuları üçün nasos–quyu–lay simulyatoru</h1><p data-az="Ştanqlı nasos quyusu üçün hasilat, nasosun doldurulması və enerji sərfi arasında ən yaxşı balansı verən rejimi quyunu dayandırmadan, kompüter simulyasiyası ilə tapmaq olarmı?" data-en="Can a computer simulation find the operating regime that best balances production, pump fillage and energy use in a sucker-rod well — without stopping the well?" >Ştanqlı nasos quyusu üçün hasilat, nasosun doldurulması və enerji sərfi arasında ən yaxşı balansı verən rejimi quyunu dayandırmadan, kompüter simulyasiyası ilə tapmaq olarmı?</p><div class="project-tags"><span data-az="Mühəndislik" data-en="Engineering" >Mühəndislik</span></div><div class="project-path"><svg viewBox="0 0 100 16" preserveAspectRatio="none" aria-hidden="true"><path d="M8 8H92"/><path class="path-fill" d="M8 8H64"/><circle cx="8" cy="8" r="4" class="reached"/><circle cx="36" cy="8" r="4" class="reached"/><circle cx="64" cy="8" r="4" class="reached"/><circle cx="92" cy="8" r="4" class=""/></svg><ol><li data-az="İdeya" data-en="Idea"  class="reached">İdeya</li><li data-az="İnkişaf" data-en="Develop"  class="reached">İnkişaf</li><li data-az="Əməkdaşlıq" data-en="Collaborate" aria-current=step class="reached">Əməkdaşlıq</li><li data-az="Nəşr" data-en="Publish"  class="">Nəşr</li></ol></div></div></section><section class="rodpump" id="how-it-works" aria-labelledby="rodpump-title">
+  <div class="container rodpump-grid">
+    <div class="rodpump-intro">
+      <h2 id="rodpump-title" data-az="Quyuda nə baş verir" data-en="What happens in the well">Quyuda nə baş verir</h2>
+      <p data-az="Səthdəki balansirli dəzgah ştanq kəmərini yuxarı-aşağı hərəkət etdirir, quyunun dibindəki plunjerli nasos isə hər gedişdə mayeni yuxarı qaldırır. Simulyator bu dövrü lay, quyu və nasosla birlikdə hesablayır." data-en="The pumping unit at the surface moves the rod string up and down, and the plunger pump at the bottom of the well lifts fluid on every stroke. The simulator calculates this cycle together with the reservoir, the well and the pump.">Səthdəki balansirli dəzgah ştanq kəmərini yuxarı-aşağı hərəkət etdirir, quyunun dibindəki plunjerli nasos isə hər gedişdə mayeni yuxarı qaldırır. Simulyator bu dövrü lay, quyu və nasosla birlikdə hesablayır.</p>
+    </div>
+
+    <div class="rodpump-controls">
+      <div class="rodpump-control-row">
+        <span class="rodpump-control-label" id="rodpump-mode-label" data-az="Nasos rejimi" data-en="Pumping mode">Nasos rejimi</span>
+        <div class="rodpump-segment" role="group" aria-labelledby="rodpump-mode-label">
+          <button type="button" data-rp-mode="continuous" aria-pressed="true" data-az="Fasiləsiz" data-en="Continuous">Fasiləsiz</button>
+          <button type="button" data-rp-mode="intermittent" aria-pressed="false" data-az="Dövri" data-en="Intermittent">Dövri</button>
+        </div>
+      </div>
+      <div class="rodpump-control-row" data-rp-speed-row>
+        <span class="rodpump-control-label" id="rodpump-speed-label" data-az="Yırğalanma sayı, 1/dəq" data-en="Strokes per minute">Yırğalanma sayı, 1/dəq</span>
+        <div class="rodpump-segment" role="group" aria-labelledby="rodpump-speed-label">
+          <button type="button" data-rp-speed="3" aria-pressed="false">3</button>
+          <button type="button" data-rp-speed="3.5" aria-pressed="false">3.5</button>
+          <button type="button" data-rp-speed="4" aria-pressed="true">4</button>
+          <button type="button" data-rp-speed="5" aria-pressed="false">5</button>
+        </div>
+      </div>
+      <button type="button" class="rodpump-play" data-rp-play aria-pressed="false"><span data-rp-play-label>Dayandır</span></button>
+    </div>
+
+    <figure class="rodpump-figure">
+      <svg class="rodpump-svg" viewBox="0 0 420 760" role="img" aria-labelledby="rodpump-svg-title" data-rp-svg>
+        <title id="rodpump-svg-title" data-az="Ştanqlı nasos quyusunun kəsiyi: balansirli dəzgah, ştanq kəməri, qaldırıcı boru, plunjerli nasos və lay" data-en="Cross-section of a sucker-rod well: pumping unit, rod string, tubing, plunger pump and reservoir">Ştanqlı nasos quyusunun kəsiyi</title>
+        <defs>
+          <pattern id="rp-sand" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#e3d2ad"/><circle cx="2" cy="3" r="1" fill="#c9b07f"/><circle cx="6.5" cy="7" r=".9" fill="#c9b07f"/></pattern>
+          <pattern id="rp-gas" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#fbf7ee"/><path d="M0 0V6" stroke="#e7dcc6" stroke-width="1.4"/></pattern>
+        </defs>
+
+        <!-- sky, ground and strata -->
+        <rect class="rp-sky" x="0" y="0" width="420" height="212"/>
+        <rect class="rp-soil1" x="0" y="212" width="420" height="120"/>
+        <rect class="rp-soil2" x="0" y="332" width="420" height="250"/>
+        <rect class="rp-soil1" x="0" y="582" width="420" height="104"/>
+        <rect x="0" y="686" width="420" height="60" fill="url(#rp-sand)"/>
+        <rect class="rp-soil2" x="0" y="746" width="420" height="14"/>
+        <path class="rp-ground" d="M0 212H420"/>
+
+        <!-- casing interior (wellbore) -->
+        <rect class="rp-bore" x="96" y="212" width="48" height="534"/>
+        <!-- annulus fluid, height driven by script -->
+        <rect class="rp-oil" data-rp-annulus x="97" y="515" width="46" height="231"/>
+        <!-- tubing interior with fluid column -->
+        <rect class="rp-oil" x="110" y="212" width="20" height="346"/>
+        <path class="rp-flow" data-rp-flow d="M120 556V214"/>
+        <!-- pump barrel -->
+        <rect class="rp-oil" data-rp-above x="108" y="556" width="24" height="20"/>
+        <rect data-rp-chamber x="108" y="588" width="24" height="76" fill="url(#rp-gas)"/>
+        <rect class="rp-oil" data-rp-liquid x="108" y="646" width="24" height="18"/>
+        <!-- walls -->
+        <path class="rp-wall" d="M96 212V746M144 212V746"/>
+        <path class="rp-tube" d="M110 212V556M130 212V556M108 552V664M132 552V664M108 556H110M130 556H132"/>
+        <!-- standing valve seat + ball -->
+        <path class="rp-seat" d="M108 664H116M124 664H132"/>
+        <circle class="rp-ball" data-rp-sv cx="120" cy="658" r="5"/>
+        <!-- perforations and inflow -->
+        <g class="rp-perfs">
+          <path d="M60 702H96M144 702H180M52 716H96M144 716H188M60 730H96M144 730H180"/>
+        </g>
+        <g class="rp-inflow" data-rp-inflow>
+          <path d="M36 709H92M148 709H204M36 723H92M148 723H204"/>
+        </g>
+
+        <!-- depth break -->
+        <path class="rp-break" d="M0 300L20 294L40 306L60 294L80 306L100 294L120 306L140 294L160 306L180 294L200 306L220 294L240 306L260 294L280 306L300 294L320 306L340 294L360 306L380 294L400 306L420 300V324L400 330L380 318L360 330L340 318L320 330L300 318L280 330L260 318L240 330L220 318L200 330L180 318L160 330L140 318L120 330L100 318L80 330L60 318L40 330L20 318L0 324Z"/>
+        <text class="rp-depth" x="404" y="316" text-anchor="end" data-az="≈ 500 m" data-en="≈ 500 m">≈ 500 m</text>
+
+        <!-- moving rod string + plunger (translated by script) -->
+        <g data-rp-rod>
+          <path class="rp-rod" d="M120 120V300M120 324V598"/>
+          <rect class="rp-carrier" x="108" y="118" width="24" height="5" rx="1"/>
+          <rect class="rp-plunger" x="110" y="594" width="20" height="24" rx="2"/>
+          <path class="rp-seat" d="M110 618H116M124 618H130"/>
+        </g>
+        <circle class="rp-ball" data-rp-tv cx="120" cy="612" r="5"/>
+
+        <!-- wellhead -->
+        <path class="rp-wellhead" d="M104 212V198H136V212M110 198V188H130V198M136 204H162"/>
+
+        <!-- pumping unit -->
+        <path class="rp-frame" d="M162 212H352"/>
+        <path class="rp-frame" d="M196 212L220 86L244 212M206 160H234"/>
+        <rect class="rp-gearbox" x="284" y="172" width="42" height="40" rx="4"/>
+        <rect class="rp-motor" x="334" y="190" width="22" height="18" rx="3"/>
+        <path class="rp-belt" d="M345 192L305 176M345 206L305 208"/>
+        <g data-rp-crank>
+          <path class="rp-crankarm" d="M305 192L329 192"/>
+          <path class="rp-weight" d="M305 192L281 192M281 180V204"/>
+        </g>
+        <path class="rp-pitman" data-rp-pitman d="M305 86L329 192"/>
+        <path class="rp-bridle" data-rp-bridle d="M120 86V120"/>
+        <g data-rp-beam>
+          <path class="rp-beam" d="M146 86H305"/>
+          <path class="rp-horsehead" d="M126.4 48.2A101 101 0 0 0 126.4 123.8L152 108V64Z"/>
+        </g>
+        <circle class="rp-pivot" cx="220" cy="86" r="5"/>
+        <circle class="rp-pivot" cx="305" cy="192" r="4"/>
+
+        <!-- labels -->
+        <g class="rp-labels">
+          <text x="236" y="40" data-az="Balansirli dəzgah" data-en="Pumping unit">Balansirli dəzgah</text>
+          <path d="M126 262H168"/><text x="172" y="266" data-az="Ştanq kəməri" data-en="Rod string">Ştanq kəməri</text>
+          <path d="M131 400H168"/><text x="172" y="404" data-az="Qaldırıcı boru" data-en="Tubing">Qaldırıcı boru</text>
+          <path d="M145 450H168"/><text x="172" y="454" data-az="Həlqəvi fəza" data-en="Annulus">Həlqəvi fəza</text>
+          <g data-rp-level-label><path class="rp-level-line" d="M143 515H168"/><text x="172" y="519" data-az="Dinamik səviyyə" data-en="Dynamic level">Dinamik səviyyə</text></g>
+          <path d="M131 600H168"/><text x="172" y="596" data-az="Plunjer və üst klapan" data-en="Plunger, travelling valve">Plunjer və üst klapan</text>
+          <path d="M131 658H168"/><text x="172" y="662" data-az="Alt klapan" data-en="Standing valve">Alt klapan</text>
+          <text x="214" y="742" data-az="Neftli lay" data-en="Oil reservoir">Neftli lay</text>
+        </g>
+      </svg>
+      <figcaption data-az="Sxem miqyassızdır; animasiya təxminən 10 dəfə sürətləndirilib." data-en="Not to scale; the animation runs about 10 times faster than the real well.">Sxem miqyassızdır; animasiya təxminən 10 dəfə sürətləndirilib.</figcaption>
+    </figure>
+
+    <div class="rodpump-readout" aria-live="polite">
+      <p class="rodpump-phase" data-rp-phase>Yuxarı gediş</p>
+      <p class="rodpump-phase-text" data-rp-phase-text></p>
+      <div class="rodpump-timeline" data-rp-timeline hidden>
+        <div class="rodpump-timeline-bar"><span class="rp-run" style="width:30%"></span><span class="rp-idle" style="width:70%"></span><i data-rp-marker></i></div>
+        <div class="rodpump-timeline-labels"><span data-az="İş 30%" data-en="Pumping 30%">İş 30%</span><span data-az="Dayanma 70%" data-en="Idle 70%">Dayanma 70%</span></div>
+      </div>
+      <dl class="rodpump-stats">
+        <div><dt data-az="Nasosun doldurulması" data-en="Pump fillage">Nasosun doldurulması</dt><dd data-rp-fill>7.0%</dd></div>
+        <div><dt data-az="Gündəlik hasilat" data-en="Daily production">Gündəlik hasilat</dt><dd data-rp-prod>0.481 m³</dd></div>
+        <div><dt data-az="Nasosun iş vaxtı" data-en="Pump running time">Nasosun iş vaxtı</dt><dd data-rp-run>100%</dd></div>
+      </dl>
+      <p class="rodpump-insight" data-rp-insight></p>
+      <p class="rodpump-source" data-az="Rəqəmlər Bibiheybət yatağının 1220 saylı quyusu üçün simulyasiya nəticələridir (2024)." data-en="Figures are simulation results for well 1220 in the Bibiheybat field (2024).">Rəqəmlər Bibiheybət yatağının 1220 saylı quyusu üçün simulyasiya nəticələridir (2024).</p>
+    </div>
+  </div>
+
+  <div class="container rodpump-field">
+    <h3 data-az="Mədən sınağı" data-en="Field test">Mədən sınağı</h3>
+    <p data-az="Simulyator 2024-cü ilin mart–may aylarında SOCAR-ın “Azneft” İB-nin Bibiheybət yatağında, 1220 saylı quyuda sınaqdan keçirilib. Quyu sutkada 0.486 m³ maye verirdi, nasos silindri isə cəmi 7% dolurdu. Hesablanmış və ölçülmüş debitlər arasında yüksək uyğunluq alınıb, nasosun səmərəsiz rejimləri müəyyən edilib və simulyatorun tövsiyə etdiyi parametrlər tətbiq olunduqdan sonra hasilat daha sabit olub." data-en="The simulator was tested from March to May 2024 on well 1220 in the Bibiheybat field, operated by SOCAR Azneft. The well produced 0.486 m³ of fluid per day with a pump barrel only 7% full. Simulated and measured flow rates agreed closely, inefficient pump regimes were identified, and production became more stable after the recommended settings were applied.">Simulyator 2024-cü ilin mart–may aylarında SOCAR-ın “Azneft” İB-nin Bibiheybət yatağında, 1220 saylı quyuda sınaqdan keçirilib.</p>
+  </div>
+  <script src="/assets/rod-pump.js?v=39" defer></script>
+</section>
+<div class="container project-detail-layout"><div class="project-detail-body"><h2 data-az="Niyə vacibdir?" data-en="Why it matters" >Niyə vacibdir?</h2><p data-az="Yetkin yataqlarda bir çox ştanqlı nasos quyusu aşağı debitlə və silindri az dolmuş halda işləyir: nasos enerji sərf edir, avadanlıq köhnəlir, hasilat isə artmır. Rejimi mədəndə sınaq yolu ilə dəyişmək vaxt aparır və hasilatı riskə atır. Simulyator standart quyu məlumatları ilə müxtəlif parametrləri virtual mühitdə yoxlamağa və quyuya yalnız əsaslandırılmış dəyişiklik tətbiq etməyə imkan verir." data-en="In mature fields many sucker-rod wells produce at low rates with a poorly filled pump barrel: the pump spends energy and wears out equipment without adding oil. Trying new settings directly in the field is slow and puts production at risk. The simulator lets engineers test settings in a virtual well using standard well data, and change the real well only when the result is clear." >Yetkin yataqlarda bir çox ştanqlı nasos quyusu aşağı debitlə və silindri az dolmuş halda işləyir: nasos enerji sərf edir, avadanlıq köhnəlir, hasilat isə artmır. Rejimi mədəndə sınaq yolu ilə dəyişmək vaxt aparır və hasilatı riskə atır. Simulyator standart quyu məlumatları ilə müxtəlif parametrləri virtual mühitdə yoxlamağa və quyuya yalnız əsaslandırılmış dəyişiklik tətbiq etməyə imkan verir.</p><h2 data-az="Yanaşma və metod" data-en="Approach &amp; method" >Yanaşma və metod</h2><p data-az="Simulyator Diskret-İmitasiya Modelləşdirmə Konsepsiyasına (DIMC) əsaslanır və laydan quyuya axını, həlqəvi fəza ilə qaldırıcı boru arasında maye mübadiləsini və plunjerli nasosun işini birlikdə hesablayır. Onunla nasosun optimal buraxılma dərinliyi, plunjerin gediş uzunluğu, nasos diametri, yırğalanma sayı və mühərrik gücü seçilir, fasiləsiz və dövri rejimlər müqayisə olunur, dövri rejimdə optimal dayanma müddəti müəyyən edilir. Nəticələr qrafiklər, hesabatlar və Excel cədvəlləri kimi çıxarılır." data-en="The simulator is built on the Discrete-Imitation Modelling Concept (DIMC). It couples reservoir inflow, fluid exchange between the annulus and the tubing, and the plunger pump in a single model. It is used to choose pump submergence depth, stroke length, pump diameter, stroke speed and motor power, to compare continuous and intermittent pumping, and to derive the optimal idle time for intermittent operation. Results are exported as plots, reports and Excel tables." >Simulyator Diskret-İmitasiya Modelləşdirmə Konsepsiyasına (DIMC) əsaslanır və laydan quyuya axını, həlqəvi fəza ilə qaldırıcı boru arasında maye mübadiləsini və plunjerli nasosun işini birlikdə hesablayır. Onunla nasosun optimal buraxılma dərinliyi, plunjerin gediş uzunluğu, nasos diametri, yırğalanma sayı və mühərrik gücü seçilir, fasiləsiz və dövri rejimlər müqayisə olunur, dövri rejimdə optimal dayanma müddəti müəyyən edilir. Nəticələr qrafiklər, hesabatlar və Excel cədvəlləri kimi çıxarılır.</p><section id="team"><h2 data-az="Layihə komandası" data-en="Project team" >Layihə komandası</h2><div class="project-team"><article><a href="/people/masud/"><img src="/assets/masud.webp?v=33" alt="" width="72" height="72" loading="lazy"/><h3>Məsud Babayev</h3></a><strong data-az="Layihə üzvü" data-en="Project member" >Layihə üzvü</strong><p data-az="Simulyasiya tədqiqatları və nəticələrin təhlili" data-en="Simulation studies and analysis of results" >Simulyasiya tədqiqatları və nəticələrin təhlili</p></article><article><a href="/people/mahammad-jamalbayov/"><img src="/assets/mahammad-jamalbayov.webp?v=39" alt="" width="72" height="72" loading="lazy"/><h3>Dr. Mahammad Jamalbayov</h3></a><strong data-az="Elmi məsləhətçi" data-en="Scientific advisor" >Elmi məsləhətçi</strong><p data-az="Simulyatorun və diskret-imitasiya modelləşdirmə konsepsiyasının müəllifi" data-en="Author of the simulator and of the discrete-imitation modelling concept" >Simulyatorun və diskret-imitasiya modelləşdirmə konsepsiyasının müəllifi</p></article></div></section><section id="outputs"><h2 data-az="Nəticələr" data-en="Outputs" >Nəticələr</h2><ol class="publication-list"><li class="publication-card"><h3 data-az="The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process — Petroleum Research, 2024" data-en="The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process — Petroleum Research, 2024" >The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process — Petroleum Research, 2024</h3><a class="publication-badge publication-badge-doi" href="https://doi.org/10.1016/j.ptlrs.2024.04.001" target="_blank" rel="noopener noreferrer">DOI 10.1016/j.ptlrs.2024.04.001 ↗</a></li><li class="publication-card"><h3 data-az="The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping — SPE Middle East Artificial Lift Conference, 2024" data-en="The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping — SPE Middle East Artificial Lift Conference, 2024" >The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping — SPE Middle East Artificial Lift Conference, 2024</h3><a class="publication-badge publication-badge-doi" href="https://doi.org/10.2118/221528-MS" target="_blank" rel="noopener noreferrer">DOI 10.2118/221528-MS ↗</a></li></ol></section><section id="updates"><h2 data-az="Yeniliklər" data-en="Updates" >Yeniliklər</h2><ol class="project-timeline"><li><time datetime="2026-10-10">2026-10-10</time><span data-az="Layihə ARS-in ilk layihəsi kimi açıq kataloqa əlavə olundu." data-en="Added to the public catalogue as the first ARS project." >Layihə ARS-in ilk layihəsi kimi açıq kataloqa əlavə olundu.</span></li></ol></section></div><aside class="project-side"><span data-az="Davam edir" data-en="Active" class="project-status status-active">Davam edir</span><h2 data-az="Komanda" data-en="Team" >Komanda</h2><ul class="project-side-team"><li><a href="/people/masud/">Məsud Babayev</a><small data-az="Layihə üzvü" data-en="Project member" >Layihə üzvü</small></li><li><a href="/people/mahammad-jamalbayov/">Dr. Mahammad Jamalbayov</a><small data-az="Elmi məsləhətçi" data-en="Scientific advisor" >Elmi məsləhətçi</small></li></ul><a class="button button-primary" href="/projects/rod-pump-simulator/#updates"><span data-az="Yeniliklərə bax" data-en="Follow updates" >Yeniliklərə bax</span></a><button class="button project-share" type="button" hidden><span data-az="Linki paylaş" data-en="Share link" >Linki paylaş</span></button><p class="share-status" role="status"></p></aside></div></main><footer class="site-footer page-footer">
+      <div class="container footer-top"><div class="footer-brand"><img src="/assets/ars-logo.png?v=22" alt="ARS" width="662" height="700" /><p data-i18n="footerTagline">Azərbaycanlı tədqiqatçıları dünya miqyasında birləşdiririk.</p></div><div class="footer-links"><div><h3 data-i18n="footerExplore">Kəşf et</h3><a href="/about.html" data-i18n="navAbout">Haqqımızda</a><a href="/programs.html" data-i18n="navPrograms">Proqramlar</a><a href="/workshop.html" data-i18n="navWorkshop">Emalatxana</a><a href="/people.html" data-i18n="navTeam">İnsanlar</a><a href="/projects.html" data-i18n="navProjects">Layihələr</a><a href="/contact.html" data-i18n="navContact">Əlaqə</a></div><div class="social-links"><h3 data-i18n="footerConnect">Əlaqə</h3><a class="social-link" href="mailto:info@azresearchsociety.org"><span>Email</span></a><a class="social-link" href="https://www.linkedin.com/company/azerbaijanresearchsociety/" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span></a><a class="social-link" href="https://instagram.com/azresearchsociety" target="_blank" rel="noopener noreferrer"><span>Instagram</span></a><a class="social-link" href="https://youtube.com/@azerbaijanresearchsociety?si=DFM3squPMfwShh9m" target="_blank" rel="noopener noreferrer"><span>YouTube</span></a></div></div></div>
+      <div class="container footer-bottom"><span>© <span id="year"></span> Azerbaijan Research Society</span><span>PEOPLE <i></i> IDEAS <i></i> RESEARCH <i></i> IMPACT</span></div>
+    </footer></body></html>

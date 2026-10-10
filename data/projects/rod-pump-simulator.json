@@ -1,0 +1,30 @@
+{
+  "public": true,
+  "approval": {"description": true, "team": true, "outputs": true},
+  "slug": "rod-pump-simulator",
+  "title": {"az": "Ştanqlı nasos quyuları üçün nasos–quyu–lay simulyatoru", "en": "Pump–Well–Reservoir Simulator for Sucker-Rod Wells"},
+  "status": "active",
+  "featured": true,
+  "cover": "pumpjack",
+  "visual": true,
+  "question": {"az": "Ştanqlı nasos quyusu üçün hasilat, nasosun doldurulması və enerji sərfi arasında ən yaxşı balansı verən rejimi quyunu dayandırmadan, kompüter simulyasiyası ilə tapmaq olarmı?", "en": "Can a computer simulation find the operating regime that best balances production, pump fillage and energy use in a sucker-rod well — without stopping the well?"},
+  "summary": {"az": "Nasosu, quyunu və quyudibi zonanı vahid dinamik sistem kimi modelləşdirən, diskret-imitasiya konsepsiyasına əsaslanan və Bibiheybət yatağında sınaqdan keçirilmiş simulyator.", "en": "A simulator that models the pump, the well and the near-wellbore reservoir as one dynamic system, built on the discrete-imitation modelling concept and tested in the Bibiheybat field."},
+  "why": {"az": "Yetkin yataqlarda bir çox ştanqlı nasos quyusu aşağı debitlə və silindri az dolmuş halda işləyir: nasos enerji sərf edir, avadanlıq köhnəlir, hasilat isə artmır. Rejimi mədəndə sınaq yolu ilə dəyişmək vaxt aparır və hasilatı riskə atır. Simulyator standart quyu məlumatları ilə müxtəlif parametrləri virtual mühitdə yoxlamağa və quyuya yalnız əsaslandırılmış dəyişiklik tətbiq etməyə imkan verir.", "en": "In mature fields many sucker-rod wells produce at low rates with a poorly filled pump barrel: the pump spends energy and wears out equipment without adding oil. Trying new settings directly in the field is slow and puts production at risk. The simulator lets engineers test settings in a virtual well using standard well data, and change the real well only when the result is clear."},
+  "method": {"az": "Simulyator Diskret-İmitasiya Modelləşdirmə Konsepsiyasına (DIMC) əsaslanır və laydan quyuya axını, həlqəvi fəza ilə qaldırıcı boru arasında maye mübadiləsini və plunjerli nasosun işini birlikdə hesablayır. Onunla nasosun optimal buraxılma dərinliyi, plunjerin gediş uzunluğu, nasos diametri, yırğalanma sayı və mühərrik gücü seçilir, fasiləsiz və dövri rejimlər müqayisə olunur, dövri rejimdə optimal dayanma müddəti müəyyən edilir. Nəticələr qrafiklər, hesabatlar və Excel cədvəlləri kimi çıxarılır.", "en": "The simulator is built on the Discrete-Imitation Modelling Concept (DIMC). It couples reservoir inflow, fluid exchange between the annulus and the tubing, and the plunger pump in a single model. It is used to choose pump submergence depth, stroke length, pump diameter, stroke speed and motor power, to compare continuous and intermittent pumping, and to derive the optimal idle time for intermittent operation. Results are exported as plots, reports and Excel tables."},
+  "fields": ["engineering"],
+  "institutions": [],
+  "lead": "masud",
+  "team": [
+    {"person": "masud", "role": {"az": "Layihə üzvü", "en": "Project member"}, "note": {"az": "Simulyasiya tədqiqatları və nəticələrin təhlili", "en": "Simulation studies and analysis of results"}},
+    {"person": "mahammad-jamalbayov", "role": {"az": "Elmi məsləhətçi", "en": "Scientific advisor"}, "note": {"az": "Simulyatorun və diskret-imitasiya modelləşdirmə konsepsiyasının müəllifi", "en": "Author of the simulator and of the discrete-imitation modelling concept"}}
+  ],
+  "open_roles": [],
+  "milestones": [],
+  "outputs": [
+    {"title": {"az": "The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process — Petroleum Research, 2024", "en": "The discrete-imitation modeling concept of the “sucker-rod pump-well-reservoir” system and the optimization of the pumping process — Petroleum Research, 2024"}, "type": "paper", "doi": "10.1016/j.ptlrs.2024.04.001"},
+    {"title": {"az": "The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping — SPE Middle East Artificial Lift Conference, 2024", "en": "The Discrete-Imitational Modeling of the Pump-Well-Reservoir System with Intermittent Sucker-Rod Pumping — SPE Middle East Artificial Lift Conference, 2024"}, "type": "paper", "doi": "10.2118/221528-MS"}
+  ],
+  "updates": [
+    {"date": "2026-10-10", "text": {"az": "Layihə ARS-in ilk layihəsi kimi açıq kataloqa əlavə olundu.", "en": "Added to the public catalogue as the first ARS project."}}
+  ]
+}

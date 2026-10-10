@@ -86,7 +86,17 @@ def constellation(p):
  pts=[(160+110*math.cos(angle+2*math.pi*i/count),90+58*math.sin(angle+2*math.pi*i/count)) for i in range(count)]
  edges=''.join(f'<path d="M160 90L{x:.1f} {y:.1f}"/>' for x,y in pts)
  nodes=''.join(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="7"><title>{esc(PEOPLE[t["person"]]["name"])}</title></circle>' for t,(x,y) in zip(p['team'],pts))
+ if p.get('cover')=='pumpjack': return pumpjack_cover(p)
  return f'<svg class="project-cover" viewBox="0 0 320 180" role="img" aria-label="{esc(p["title"]["az"])}" data-label-az="{esc(p["title"]["az"])}" data-label-en="{esc(p["title"]["en"])}"><circle class="cover-orbit" cx="160" cy="90" r="70"/>{edges}{nodes}<circle class="cover-hub" cx="160" cy="90" r="12"/></svg>'
+def pumpjack_cover(p):
+ # Static line drawing of a beam pumping unit for rod-pump projects.
+ return (f'<svg class="project-cover project-cover-pumpjack" viewBox="0 0 320 180" role="img" aria-label="{esc(p["title"]["az"])}" data-label-az="{esc(p["title"]["az"])}" data-label-en="{esc(p["title"]["en"])}">'
+  '<path class="pj-ground" d="M0 150H320"/><path class="pj-soil" d="M0 150H320V180H0Z"/>'
+  '<path class="pj-frame" d="M170 150L190 62L210 150M178 115H202"/>'
+  '<g class="pj-beam"><path d="M118 61L262 66"/><path class="pj-head" d="M101 37A86 86 0 0 0 99 87L120 77L121 47Z"/></g>'
+  '<path class="pj-rod" d="M96 72V170"/><path class="pj-frame" d="M80 150H112V142H80Z"/>'
+  '<path class="pj-frame" d="M262 66L270 118"/><circle class="pj-crank" cx="262" cy="122" r="16"/><path class="pj-frame" d="M238 150L250 130H276L288 150"/>'
+  '<circle class="pj-pivot" cx="190" cy="62" r="4"/></svg>')
 def avatars(p):
  team=p['team']; s=''.join(f'<a href="{personlink(t["person"])}" title="{esc(PEOPLE[t["person"]]["name"])}"><img src="/{PEOPLE[t["person"]]["image"]}" width="40" height="40" loading="lazy" alt="{esc(PEOPLE[t["person"]]["name"])}"/></a>' for t in team[:4])
  if len(team)>4:s+=f'<a href="{link(p)}#team">+{len(team)-4}</a>'
@@ -113,8 +123,8 @@ def writepage(filename,title,desc,body,page='projects'):
 <title>{esc(title['az'])} | ARS</title><meta name="description" content="{esc(desc['az'])}"/>
 <meta name="theme-color" content="#071f4a"/><link rel="canonical" href="{canonical}"/>
 <meta property="og:type" content="website"/><meta property="og:title" content="{esc(title['az'])} | ARS"/><meta property="og:description" content="{esc(desc['az'])}"/><meta property="og:url" content="{canonical}"/>
-<link rel="icon" href="/assets/ars-logo.png?v=22"/><link rel="stylesheet" href="/styles.css?v=38"/><link rel="stylesheet" href="/projects.css?v=38"/>
-<script src="/script.js?v=38" defer></script><script src="/project-data.js?v=38" defer></script><script src="/projects.js?v=38" defer></script></head>
+<link rel="icon" href="/assets/ars-logo.png?v=22"/><link rel="stylesheet" href="/styles.css?v=39"/><link rel="stylesheet" href="/projects.css?v=39"/>
+<script src="/script.js?v=39" defer></script><script src="/project-data.js?v=39" defer></script><script src="/projects.js?v=39" defer></script></head>
 <body class="inner-page" data-page="{page}" data-title-az="{esc(title['az'])} | ARS" data-title-en="{esc(title['en'])} | ARS" data-description-az="{esc(desc['az'])}" data-description-en="{esc(desc['en'])}">
 <a class="skip-link" href="#main" data-i18n="skip">Əsas məzmuna keç</a>{header}<main id="main">{body}</main>{footer}</body></html>'''
  path=ROOT/filename;path.parent.mkdir(parents=True,exist_ok=True);path.write_text(html)
@@ -125,8 +135,8 @@ def replaceblock(name,block,filename='index.html'):
  s,n=re.subn(pattern,lambda m:f'<!-- PROJECTS_{name}_START -->\n{block}\n<!-- PROJECTS_{name}_END -->',s,flags=re.S);assert n==1,(filename,name);path.write_text(s)
 
 # Additional scientific members, approved by the society, appear on both board surfaces.
-SCIENTIFIC_ADDITIONS=['ayten-merdanova', 'orxan-refiyev', 'ali-madayen', 'natiq-soltanov', 'shamxal-baybekov', 'senan-goyushlu', 'elshen-abdullayev']
-CARD_SUMMARIES={'ayten-merdanova': ('İstanbul Universiteti-Cerrahpaşa · Doktorantura təhsili', 'Istanbul University-Cerrahpaşa · Doctoral studies', 'Analitik kimya · Spektroskopiya', 'Analytical chemistry · Spectroscopy'), 'orxan-refiyev': ('Imperial College London · Magistr təhsili', 'Imperial College London · MSc studies', 'Enerji sistemləri · Maşın öyrənməsi', 'Energy systems · Machine learning'), 'ali-madayen': ('ODTÜ · PhD məzunu', 'METU · PhD graduate', 'CFD · Biofluid mexanikası', 'CFD · Biofluid mechanics'), 'natiq-soltanov': ('İstanbul Texniki Universiteti', 'Istanbul Technical University', 'CO₂ saxlanması · Rezervuar modelləşdirilməsi', 'CO₂ storage · Reservoir modelling'), 'shamxal-baybekov': ('Insilico Medicine · ADNSU', 'Insilico Medicine · ASOIU', 'Kemoinformatika · QSAR/QSPR', 'Cheminformatics · QSAR/QSPR'), 'senan-goyushlu': ('Neft-Kimya Prosesləri İnstitutu', 'Institute of Petrochemical Processes', 'Neft emalı · Polimer-modifikasiyalı bitum', 'Petroleum refining · Polymer-modified bitumen'), 'elshen-abdullayev': ('Apex Health · Qətər', 'Apex Health · Qatar', 'Süni intellekt · Ürək-damar görüntüləməsi', 'AI · Cardiovascular imaging')}
+SCIENTIFIC_ADDITIONS=['ayten-merdanova', 'orxan-refiyev', 'ali-madayen', 'natiq-soltanov', 'shamxal-baybekov', 'senan-goyushlu', 'elshen-abdullayev', 'mahammad-jamalbayov']
+CARD_SUMMARIES={'ayten-merdanova': ('İstanbul Universiteti-Cerrahpaşa · Doktorantura təhsili', 'Istanbul University-Cerrahpaşa · Doctoral studies', 'Analitik kimya · Spektroskopiya', 'Analytical chemistry · Spectroscopy'), 'orxan-refiyev': ('Imperial College London · Magistr təhsili', 'Imperial College London · MSc studies', 'Enerji sistemləri · Maşın öyrənməsi', 'Energy systems · Machine learning'), 'ali-madayen': ('ODTÜ · PhD məzunu', 'METU · PhD graduate', 'CFD · Biofluid mexanikası', 'CFD · Biofluid mechanics'), 'natiq-soltanov': ('İstanbul Texniki Universiteti', 'Istanbul Technical University', 'CO₂ saxlanması · Rezervuar modelləşdirilməsi', 'CO₂ storage · Reservoir modelling'), 'shamxal-baybekov': ('Insilico Medicine · ADNSU', 'Insilico Medicine · ASOIU', 'Kemoinformatika · QSAR/QSPR', 'Cheminformatics · QSAR/QSPR'), 'senan-goyushlu': ('Neft-Kimya Prosesləri İnstitutu', 'Institute of Petrochemical Processes', 'Neft emalı · Polimer-modifikasiyalı bitum', 'Petroleum refining · Polymer-modified bitumen'), 'elshen-abdullayev': ('Apex Health · Qətər', 'Apex Health · Qatar', 'Süni intellekt · Ürək-damar görüntüləməsi', 'AI · Cardiovascular imaging'), 'mahammad-jamalbayov': ('SOCAR · Aparıcı tədqiqatçı', 'SOCAR · Lead Researcher', 'Nasos–quyu–lay modelləşdirilməsi · Lay energetikası', 'Pump–well–reservoir modelling · Reservoir energetics')}
 cards=''
 for pid in SCIENTIFIC_ADDITIONS:
  person=PEOPLE[pid]
@@ -174,15 +184,16 @@ replaceblock('PATHS','<div class="container project-entry-paths">'+''.join(f'<a 
 for p in PROJECTS:
  main='<section class="project-detail-head"><div class="container"><a href="/projects.html">'+tr(('Bütün layihələr','All projects'))+' ←</a>'+badge(p)+tr(p['title'],'h1')+tr(p['question'],'p')+chips(p)+pathbar(p)+'</div></section>'
  content=heading('Niyə vacibdir?','Why it matters')+tr(p['why'],'p')+heading('Yanaşma və metod','Approach & method')+tr(p['method'],'p')
- content+='<section id="milestones">'+heading('Mərhələlər','Milestones')+'<ol class="project-timeline">'+''.join(f'<li><time datetime="{m["date"]}">{m["date"]}</time>{tr(m["text"])}</li>' for m in p.get('milestones',[]))+'</ol></section>'
+ if p.get('milestones'): content+='<section id="milestones">'+heading('Mərhələlər','Milestones')+'<ol class="project-timeline">'+''.join(f'<li><time datetime="{m["date"]}">{m["date"]}</time>{tr(m["text"])}</li>' for m in p.get('milestones',[]))+'</ol></section>'
  content+='<section id="team">'+heading('Layihə komandası','Project team')+'<div class="project-team">'
  for t in p['team']:
   person=PEOPLE[t['person']];content+=f'<article><a href="{personlink(t["person"])}"><img src="/{person["image"]}" alt="" width="72" height="72" loading="lazy"/><h3>{esc(person["name"])}</h3></a>'+tr(t['role'],'strong')+tr(t['note'],'p')+'</article>'
- content+='</div></section><section id="open-roles">'+heading('Açıq rollar','Open roles')
+ content+='</div></section>'
+ if p.get('open_roles'): content+='<section id="open-roles">'+heading('Açıq rollar','Open roles')
  for r in p.get('open_roles',[]):
   content+='<article class="project-role-card">'+tr(r['title'],'h3')+tr(r['commitment'],'strong')+tr(r['description'],'p')+'<div class="project-tags">'+''.join(tr(s) for s in r['skills'])+'</div><p>'+tr(('Uyğun karyera mərhələsi:','Suitable career stages:'))+' '+''.join(tr(CAREERS[c])+' ' for c in r['career_stages'])+f'</p><a class="button button-primary" href="/join.html?intent=join&amp;project={p["slug"]}&amp;role={r["id"]}">'+tr(('Müraciət et','Apply'))+'</a></article>'
- if not p.get('open_roles'):content+=tr(('Hazırda açıq rol yoxdur.','There are no open roles at present.'),'p')
- content+='</section><section id="outputs">'+heading('Nəticələr','Outputs')+'<ol class="publication-list">'
+ if p.get('open_roles'): content+='</section>'
+ content+='<section id="outputs">'+heading('Nəticələr','Outputs')+'<ol class="publication-list">'
  for o in p.get('outputs',[]):
   dest='https://doi.org/'+quote(o['doi'],safe='/():') if o.get('doi') else o['url']
   content+='<li class="publication-card">'+tr(o['title'],'h3')+f'<a class="publication-badge publication-badge-doi" href="{url(dest)}" target="_blank" rel="noopener noreferrer">{esc("DOI "+o["doi"] if o.get("doi") else o["type"])} ↗</a></li>'
@@ -193,7 +204,11 @@ for p in PROJECTS:
  content+='</section>'
  related=[q for q in PROJECTS if q!=p and set(q['fields'])&set(p['fields'])][:2]
  if related: content+='<section>'+heading('Əlaqəli layihələr','Related projects')+''.join(f'<p><a class="project-detail-link" href="{link(q)}">{tr(q["title"])}</a></p>' for q in related)+'</section>'
- side=badge(p)+tr(('Layihə rəhbəri','Project lead'),'h2')+f'<a href="{personlink(p["lead"])}">{esc(PEOPLE[p["lead"]]["name"])}</a><a class="button button-primary" href="{actionurl(p)}">'+tr(action(p))+'</a><button class="button project-share" type="button" hidden>'+tr(('Linki paylaş','Share link'))+'</button><p class="share-status" role="status"></p>'
+ side=badge(p)+tr(('Komanda','Team'),'h2')+'<ul class="project-side-team">'+''.join(f'<li><a href="{personlink(t["person"])}">{esc(PEOPLE[t["person"]]["name"])}</a>'+tr(t['role'],'small')+'</li>' for t in p['team'])+'</ul>'+f'<a class="button button-primary" href="{actionurl(p)}">'+tr(action(p))+'</a><button class="button project-share" type="button" hidden>'+tr(('Linki paylaş','Share link'))+'</button><p class="share-status" role="status"></p>'
+ visual=ROOT/'templates/project-visuals'/(p['slug']+'.html')
+ if p.get('visual'):
+  assert visual.exists(), 'Missing visual partial '+str(visual)
+  main+=visual.read_text(encoding='utf-8')
  main+='<div class="container project-detail-layout"><div class="project-detail-body">'+content+'</div><aside class="project-side">'+side+'</aside></div>'
  writepage('projects/'+p['slug']+'/index.html',p['title'],p['summary'],main)
 
@@ -289,7 +304,10 @@ def update_organization(match):
  prior={m['name']:m for m in data.get('member',[])}
  members=[]
  for pid,person in PEOPLE.items():
-  m=prior.get(person['name'],{'@type':'Person','name':person['name'],'jobTitle':person['role']['en']})
+  plain=person['name'].removeprefix('Dr. ')
+  m=prior.get(plain) or prior.get(person['name']) or {'@type':'Person','name':plain,'jobTitle':person['role']['en']}
+  m['name']=plain
+  if person['name'].startswith('Dr. '): m['honorificPrefix']='Dr.'
   m['jobTitle']=person['role']['en']
   m['url']='https://azresearchsociety.org'+personlink(pid)
   m['image']='https://azresearchsociety.org/'+person['image']
